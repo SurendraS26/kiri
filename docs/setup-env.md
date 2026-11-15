@@ -15,7 +15,11 @@ Debian Linux Installation Guide
 QEMU/KVM Setup
 --------------
 
-```bash
+```sh
+qemu-img create -f qcow2 debian.qcow2 256G
+```
+
+```sh
 qemu-system-x86_64 \
   -enable-kvm \
   -m 4G \
