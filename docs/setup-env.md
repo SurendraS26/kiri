@@ -20,12 +20,17 @@ qemu-img create -f qcow2 debian.qcow2 256G
 ```
 
 ```sh
+editor boot.sh
+```
+
+```sh
+#!/bin/sh
 qemu-system-x86_64 \
   -enable-kvm \
   -m 4G \
   -smp 4 \
-  -cdrom debian-xfce4.iso \
-  -drive file=disk.qcow2,if=virtio,format=qcow2 \
+  -cdrom <iso_filename> \
+  -drive file=debian.qcow2,if=virtio,format=qcow2 \
   -device virtio-vga-gl \
   -display gtk,gl=on \
   -netdev user,id=net0 -device virtio-net-pci,netdev=net0 \
@@ -33,6 +38,10 @@ qemu-system-x86_64 \
   -device AC97,audiodev=audio0
 ```
 
+```sh
+chmod +x boot.sh
+./boot.sh
+```
 
 VirtualBox Setup
 ----------------
