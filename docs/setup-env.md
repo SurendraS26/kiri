@@ -16,11 +16,11 @@ QEMU/KVM Setup
 --------------
 
 ```sh
-qemu-img create -f qcow2 debian.qcow2 256G
+> qemu-img create -f qcow2 debian.qcow2 256G
 ```
 
 ```sh
-editor boot.sh
+> editor boot.sh
 ```
 
 ```sh
@@ -39,13 +39,9 @@ qemu-system-x86_64 \
 ```
 
 ```sh
-chmod +x boot.sh
-./boot.sh
+> chmod +x boot.sh
+> ./boot.sh
 ```
 
 VirtualBox Setup
 ----------------
-
-
-VMware Setup
-------------
