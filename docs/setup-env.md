@@ -1,28 +1,24 @@
 Build Environment for Mira
-==================================
+==========================
 
 This `setup-env.md` will guide you on how to setup up an environment to build and test the mira app on your system. This setup works for both VMs and Host machines running debian linux distribution as build environment. 
 
-Debian Linux Installation Guide
--------------------------------
-
-
-
-
-
-
+> Note: Debian is recommended for this project cause we rely on a stable releases.
 
 QEMU/KVM Setup
 --------------
 
+Create the virtual disk image for qemu.
 ```sh
 > qemu-img create -f qcow2 debian.qcow2 256G
 ```
 
+Open an editor and create a file named `boot.sh`.
 ```sh
 > editor boot.sh
 ```
 
+Copy and Paste the below script in `boot.sh`.
 ```sh
 #!/bin/sh
 qemu-system-x86_64 \
@@ -38,10 +34,8 @@ qemu-system-x86_64 \
   -device AC97,audiodev=audio0
 ```
 
+Make it executable and run the script to boot the virtual machine.
 ```sh
 > chmod +x boot.sh
 > ./boot.sh
 ```
-
-VirtualBox Setup
-----------------
