@@ -1,7 +1,7 @@
-Build Environment for Mira
+Build Environment for Kiri 
 ==========================
 
-This `setup-env.md` will guide you on how to setup up an environment to build and test the mira app on your system. This setup works for both VMs and Host machines running debian linux distribution as build environment. 
+This `setup-env.md` will guide you on how to setup up an environment to build and test the Kiri app on your system. This setup works for both VMs and Host machines running debian linux distribution as build environment. 
 
 > Note: Debian is recommended for this project cause we rely on a stable releases.
 
